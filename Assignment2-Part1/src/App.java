@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class App
 {
-   public static final int NUMBER_OF_GUESTS = 20;
+   public static final int NUMBER_OF_GUESTS = 15;
    public static ArrayList<Guest> guests = new ArrayList<Guest>();
    private static Minotaur minotaur;
    private static double time;
