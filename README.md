@@ -4,7 +4,7 @@ Minotaur’s Birthday Party (50 points): The Minotaur invited N guests to his bi
 
 #
 
-The solution to this problem is to assign one guest as a counter to keep track of how many guests have entered the labyrinth. When another guest enters the labyrinth and the plate is empty, they may leave a cupcake for the first guest if they have not already done so. The counter will eventually eat one cupcake from every guests, and alert the minotaur that everyone has entered when that happens. While this solution is inefficient for a large number of guests, it guarentees that the counter will correctly claim that everyone has entered.
+The solution to this problem is to assign one guest as a counter to keep track of how many guests have entered the labyrinth. When another guest enters the labyrinth and the plate is empty, they may leave a cupcake for the first guest if they have not already done so. The counter will eventually eat one cupcake from every guests, and alert the minotaur that everyone has entered when that happens. While this solution is inefficient for a large number of guests, it guarentees that the counter will eventually and correctly claim that everyone has entered.
 
 <br>
 
@@ -19,8 +19,8 @@ Which of these three strategies should the guests choose? Please discuss the adv
 
 #
 
-The first strategy is similar to a test-and-set lock. Guests will keep attempting to enter until the minotaur lets them in. However this system becomes very inefficient for large number of guests.
+The first strategy is similar to a test-and-set system. Guests will keep attempting to enter until the minotaur lets them in. However this system becomes very inefficient for large number of guests.
 
-The second strategy is similar to a test-and-test-and-set lock. Guests must check the sign first before attempting to enter. This will cause fewer guests to attempt to enter at the same time, reducing the time it takes for the minotaur to pick a guests. Better than the first strategy, but will still become more inefficient as the number of guests increases.
+The second strategy is similar to a test-and-test-and-set system. Guests must check the sign first before attempting to enter. This will cause fewer guests to attempt to enter at the same time, reducing the time it takes for the minotaur to pick a guests. Better than the first strategy, but will still become more inefficient as the number of guests increases.
 
-The third strategy is the best overall. Guests are let in in a specific order, and any guest who would like to enter again must go to the back of the queue. However, some special cases have to be accounted for with these rules. The minotaur must notify the first guest in the queue to enter to begin the cycle. The last person in the queue may not re-enter the vase room, as there will be no-one else in line to continue the queue.
+The third strategy is the best strategy overall. Guests are let in in a specific order, and any guest who would like to enter again must go to the back of the queue. However, some special cases have to be accounted for with these rules. The minotaur must notify the first guest in the queue to enter to begin the queue. The last person in the queue may not re-enter the vase room, as there will be no-one else in line to continue the queue.
